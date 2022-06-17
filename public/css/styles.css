@@ -7,6 +7,13 @@
     font-family: 'segoe ui';
   }
 
+  .main-body {
+    display: grid;
+    justify-content: center;
+  }
+
+/* NAVBAR */
+
   #nav-icon{
     width: 3em;
   }
@@ -108,4 +115,14 @@
       overflow-y: auto;
       border-radius: 1px;
     }
+  }
+
+  /* MAIN */
+
+table, th {
+    margin-top: 5em;
+    border-collapse: collapse;
+    padding: 1em;
+    border: 0;
+    border-bottom: 1px black solid;
   }
