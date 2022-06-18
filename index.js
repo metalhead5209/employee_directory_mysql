@@ -2,8 +2,6 @@ const express = require("express");
 const handleBars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const mySql = require("mysql");
-const router = require('./server/routes/employees')
-
 const routes = require('./server/routes/employees')
 
 require("dotenv").config();
@@ -35,10 +33,6 @@ app.use('/', routes);
 app.engine("hbs", handleBars.engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
 
-// ROUTES
-app.get("/", (req, res) => {
-  res.render("index");
-});
 
 app.listen(PORT, () => {
   console.log(`ON PORT ${PORT}`);
