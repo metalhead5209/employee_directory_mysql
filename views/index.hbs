@@ -7,17 +7,23 @@
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Hire Date</th>
+      <th scope="col">Department</th>
+      <th scope="col">Status</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
+
+    {{#each data}}
     <tr>
-      <th scope="row">1</th>
-      <td>Aaron</td>
-      <td>Rodi</td>
-      <td>email@email.com</td>
-      <td>5045555546</td>
-      <td>6/18/2022, 1:26:30 AM</td>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.first_name}}</td>
+      <td>{{this.last_name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td>{{this.hire_date}}</td>
+      <td>{{this.department}}</td>
+      <td>{{this.status}}</td>
       <td>
 
         <a href="#" type="button"><button>View</button></a>
@@ -26,5 +32,9 @@
 
       </td>
     </tr>
+
   </tbody>
 </table>
+
+{{/each}}
+

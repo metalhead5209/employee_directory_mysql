@@ -78,17 +78,23 @@
 
 
     /* MAIN */
+table {
+  max-width: 100%;
+}
+
 
 table, th {
   margin-top: 5em;
   border-collapse: collapse;
-  padding: 1em;
-  border: 0;
-  border-bottom: 1px black solid;
+  padding: .5em;
+  border: 0; 
 }
 
-table, td {
-  padding: 2em;
+
+ td {
+  padding: 1em;
+  border-top: 1px black solid;
+  
 }
 
 button {
@@ -104,7 +110,7 @@ button {
 button:hover {
   transform: translateY(-1px);
   background-color: #ae0e0e;
-  border: 3.5px #c3121262 solid;
+  border: 3.5px #e13131a9 solid;
   color: #eee;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   transition: ease-in .15s;

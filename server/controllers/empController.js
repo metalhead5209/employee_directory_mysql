@@ -24,6 +24,7 @@ exports.all = (req, res) => {
 
         success.query('SELECT * FROM employees', (err, data) => {
           success.release();
+          
             if (data) {
               res.render('index', { data });
             } else {
