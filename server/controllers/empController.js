@@ -1,4 +1,5 @@
 const mySql = require('mysql');
+require("dotenv").config();
 
 // DB CONNECTION
 const dbConnect = mySql.createPool({
@@ -6,7 +7,8 @@ const dbConnect = mySql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
   });
   
 
@@ -15,23 +17,22 @@ exports.all = (req, res) => {
    
    
     dbConnect.getConnection((err, success) => {
-      if (success) {
+      if (!err) {
         console.log(`Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`);
-      } else if (err) 
+      } else if (success) 
         console.log("ERROR", err);
 
         success.query('SELECT * FROM employees', (err, data) => {
-            success.release();
-            if (!err) {
-                res.render('index');
-            }else (err) => {
-                console.log('ERROR', err)
+          success.release();
+            if (data) {
+              res.render('index', { data });
+            } else {
+              console.log(err)
             }
-            console.log(data);
-        })
+            console.log("Data from Table: \n", data)
+        });
     });
   }; 
-  
   
   
   
