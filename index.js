@@ -2,6 +2,9 @@ const express = require("express");
 const handleBars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const mySql = require("mysql");
+const router = require('./server/routes/employees')
+
+const routes = require('./server/routes/employees')
 
 require("dotenv").config();
 
@@ -26,6 +29,7 @@ dbConnect.getConnection((err, connection) => {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use('/', routes);
 
 // TEMPLATE ENGINE
 app.engine("hbs", handleBars.engine({ extname: ".hbs" }));
