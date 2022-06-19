@@ -103,12 +103,12 @@
 
     /* MAIN */
 table {
-  max-width: 100%;
+  max-width: 90%;
 }
 
 
 table, th {
-  margin-top: 5em;
+  margin-top: 10em;
   border-collapse: collapse;
   padding: .5em;
   border: 0; 
@@ -144,7 +144,7 @@ button:hover {
 
 
   
-  @media (max-width:600px) and (max-device-width: 1024px) {
+  @media (max-width:600px) {
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;

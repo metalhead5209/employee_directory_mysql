@@ -19,21 +19,21 @@ app.engine("hbs", handleBars.engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
 
 // DB CONNECTION
-const dbConnect = mysql.createPool({
-  connectionLimit: 100,
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT
-});
+// const dbConnect = mysql.createPool({
+//   connectionLimit: 100,
+//   host: process.env.DB_HOST,
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_NAME,
+//   port: process.env.DB_PORT
+// });
 
-dbConnect.getConnection((err, success) => {
-    if (success) {
-      console.log(`Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`);
-    } else if (err) 
-      console.log("ERROR", err);
-});
+// dbConnect.getConnection((err, success) => {
+//     if (success) {
+//       console.log(`Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`);
+//     } else if (err) 
+//       console.log("ERROR", err);
+// });
 
 
 // MIDDLEWARE

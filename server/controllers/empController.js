@@ -1,3 +1,4 @@
+const { connection } = require('mongoose');
 const mysql = require('mysql');
 require("dotenv").config();
 
@@ -38,9 +39,26 @@ exports.all = (req, res) => {
 
   // Search Employee
     exports.search = (req, res) => {
-      
-    }
- 
+
+      dbConnect.getConnection((err, success) => {
+        if (success) {
+          console.log(`Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`);
+        } else if (err) 
+          console.log("ERROR", err);
+          let employee = req.body.search;
   
+          success.query('SELECT * FROM employees WHERE first_name LIKE ?', ['%' + employee + '%'], (err, data) => {
+            success.release();
+            
+              if (data) {
+                res.render('index', { data });
+              } else {
+                console.log(err)
+              }
+              // console.log("Data from Table: \n", data)
+          });
+      });
+     
+    }
   
   
