@@ -12,7 +12,7 @@ const dbConnect = mysql.createPool({
   });
   
 
-
+// Display Employees
 exports.all = (req, res) => {
    
    
@@ -30,10 +30,17 @@ exports.all = (req, res) => {
             } else {
               console.log(err)
             }
-            console.log("Data from Table: \n", data)
+            // console.log("Data from Table: \n", data)
         });
     });
+
   }; 
+
+  // Search Employee
+    exports.search = (req, res) => {
+      
+    }
+ 
   
   
   

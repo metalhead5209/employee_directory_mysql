@@ -6,6 +6,8 @@ const empController = require('../controllers/empController');
 
 // ROUTES
 router.get('/', empController.all)
+
+// router.post('/', empController.search)
   
 
 
