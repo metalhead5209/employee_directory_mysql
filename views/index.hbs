@@ -16,25 +16,27 @@
 
     {{#each data}}
     <tr>
-      <th scope="row">{{this.id}}</th>
-      <td>{{this.first_name}}</td>
-      <td>{{this.last_name}}</td>
-      <td>{{this.email}}</td>
-      <td>{{this.phone}}</td>
-      <td>{{this.hire_date}}</td>
-      <td>{{this.department}}</td>
-      <td>{{this.status}}</td>
+      <th scope="row">{{id}}</th>
+      <td>{{first_name}}</td>
+      <td>{{last_name}}</td>
+      <td>{{email}}</td>
+      <td>{{phone}}</td>
+      <td>{{hire_date}}</td>
+      <td>{{department}}</td>
+      <td>{{status}}</td>
       <td>
 
-        <a href="#" type="button"><button>View</button></a>
-        <a href="#" type="button"><button>Edit</button></a>
-        <a href="#" type="button"><button>Delete</button></a>
+        <a href="#" type="button" id="view"><button>View</button></a>
+        <a href="#" type="button" id="edit"><button>Edit</button></a>
+        <a href="#" type="button" id="delete"><button>Delete</button></a>
 
       </td>
     </tr>
 
+    {{/each}}
+
   </tbody>
 </table>
 
-{{/each}}
+
 

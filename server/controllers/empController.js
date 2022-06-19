@@ -1,8 +1,8 @@
-const mySql = require('mysql');
+const mysql = require('mysql');
 require("dotenv").config();
 
 // DB CONNECTION
-const dbConnect = mySql.createPool({
+const dbConnect = mysql.createPool({
     connectionLimit: 100,
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -17,9 +17,9 @@ exports.all = (req, res) => {
    
    
     dbConnect.getConnection((err, success) => {
-      if (!err) {
+      if (success) {
         console.log(`Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`);
-      } else if (success) 
+      } else if (err) 
         console.log("ERROR", err);
 
         success.query('SELECT * FROM employees', (err, data) => {

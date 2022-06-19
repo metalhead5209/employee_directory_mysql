@@ -1,0 +1,1 @@
+const { hire_date } = data; 
