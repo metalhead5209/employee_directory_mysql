@@ -37,6 +37,8 @@ exports.all = (req, res) => {
 
   }; 
 
+  
+
   // Search Employee
     exports.search = (req, res) => {
 
