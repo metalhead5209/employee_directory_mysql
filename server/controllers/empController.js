@@ -48,7 +48,7 @@ exports.all = (req, res) => {
         }else if (err) console.log(err);
         let employee = req.body.search;
 
-        success.query('SELECT * FROM employees WHERE first_name LIKE ?', ['%' + employee + '%'], (err, data) => {
+        success.query('SELECT * FROM employees WHERE first_name LIKE ? OR last_name LIKE ?', ['%' + employee + '%', '%' + employee + '%'], (err, data) => {
           success.release();
 
           if (data) {

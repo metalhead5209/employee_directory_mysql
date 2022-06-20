@@ -79,8 +79,11 @@
   }
 
   #empSrchBtn {
+    font-size: 12px;
+    padding: 3px;
+    width: 5em;
     position: absolute;
-    top: 35%;
+    top: 37%;
     left: 80%;
     background-color: white;
     border-radius: 5px;
@@ -123,12 +126,17 @@ table, th {
   
 }
 
+.action {
+  text-align: center;
+}
+
 button {
-  padding: .25em;
-  width: 5em; 
+  padding: .15em;
+  width: 4em; 
   background-color: #c3121262;
-  border: 3.5px #ae0e0e solid;
+  border: 2.5px #ae0e0e solid;
   font-weight: 500;
+  font-size: 11px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border-radius: 3px;
 } 
