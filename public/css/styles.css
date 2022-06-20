@@ -142,6 +142,16 @@ button:hover {
   transition: ease-in .15s;
 }
 
+/* Scroll Bar */
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: black;
+}
+body::-webkit-scrollbar-thumb {
+  background: #ae0e0e;
+}
 
 
 
