@@ -5,9 +5,6 @@ const mysql = require("mysql");
 const routes = require('./server/routes/empRoutes');
 
 
-
-
-
 require("dotenv").config();
 
 const app = express();
