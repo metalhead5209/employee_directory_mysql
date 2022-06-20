@@ -1,46 +1,42 @@
-
-
 <div class="modal-container" id="modal-contain">
   <div class="modal" id="emp-modal">
     <span id="close-modal-btn">&#88</span>
     <h2>Add Employee</h2>
     <div class="form">
-      <form action="#" class="modal-form">
+      <form action="/" method="POST" class="modal-form">
         <div class="form-val">
-        <label for="first-name" class="form-label">First Name</label>
-        <input type="text" class="form-input" id="first-name">
+          <label for="first-name" class="form-label">First Name</label>
+          <input type="text" class="form-input" name="first_name" id="first-name" />
         </div>
-<br>
+        <br />
         <div class="form-val">
-        <label for="last-name" class="form-label">Last Name</label>
-        <input type="text" class="form-input" id="last-name">
+          <label for="last-name" class="form-label">Last Name</label>
+          <input type="text" class="form-input" name="last_name" id="last-name" />
         </div>
-<br>
+        <br />
         <div class="form-val">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-input" id="email">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-input" name="email" id="email" />
         </div>
-<br>
+        <br />
         <div class="form-val">
-        <label for="phone" class="form-label">Phone #</label>
-        <input type="text" class="form-input" id="phone">
+          <label for="phone" class="form-label">Phone #</label>
+          <input type="text" class="form-input" name="phone" id="phone" />
         </div>
-<br>
+        <br />
         <div class="form-val">
-        <label for="department" class="form-label">Department</label>
-        <input type="text" class="form-input" id="department">
+          <label for="department" class="form-label">Department</label>
+          <input type="text" class="form-input" name="department" id="department" />
         </div>
-<br>
+        <br />
         <div class="form-btn">
-        <button id="form-submit">Submit</button>
+          <button id="form-submit">Submit</button>
         </div>
       </form>
     </div>
 
-
   </div>
 </div>
-
 
 <table>
   <thead>
@@ -59,28 +55,28 @@
   <tbody>
 
     {{#each data}}
-    <tr>
-      <th scope="row">{{id}}</th>
-      <td>{{first_name}}</td>
-      <td>{{last_name}}</td>
-      <td>{{email}}</td>
-      <td>{{phone}}</td>
-      <td>{{hire_date}}</td>
-      <td>{{department}}</td>
-      <td>{{status}}</td>
-      <td class="action">
+      <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{first_name}}</td>
+        <td>{{last_name}}</td>
+        <td>{{email}}</td>
+        <td>{{phone}}</td>
+        <td>{{hire_date}}</td>
+        <td>{{department}}</td>
+        <td>{{status}}</td>
+        <td class="action">
 
-        <a href="#" type="button" id="view"><button>View</button></a>
-        <a href="#" type="button" id="edit"><button>Edit</button></a>
-        <a href="#" type="button" id="delete"><button>Delete</button></a>
+          <a href="#" type="button" class="action-btn" id="view"><button
+            >View</button></a>
+          <a href="#" type="button" class="action-btn" id="edit"><button
+            >Edit</button></a>
+          <a href="#" type="button" class="action-btn" id="delete"><button
+            >Delete</button></a>
 
-      </td>
-    </tr>
+        </td>
+      </tr>
 
     {{/each}}
 
   </tbody>
 </table>
-
-
-

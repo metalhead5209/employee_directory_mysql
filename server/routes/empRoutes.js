@@ -8,6 +8,8 @@ const empController = require('../controllers/empController');
 router.get('/', empController.all)
 
 router.post('/', empController.search)
+
+router.post('/', empController.newEmp)
   
 
 

@@ -1,117 +1,112 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0px;
-    font-family: 'segoe ui';
-    font-family: 'Readex Pro', sans-serif;
-    font-weight: 600;
-    background-color:rgb(247, 245, 245)
-  }
+  box-sizing: border-box;
+}
 
-  .main-body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    width: 85%;
-  }
+body {
+  margin: 0px;
+  font-family: "segoe ui";
+  font-family: "Readex Pro", sans-serif;
+  font-weight: 600;
+  background-color: rgb(247, 245, 245);
+}
+
+.main-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 85%;
+}
 
 /* NAVBAR */
 
-  #nav-icon{
-    width: 2em;
-  }
+#nav-icon {
+  width: 2em;
+}
 
- #title {
-    position: absolute;
-    top: 30px;
-    left: 60px;
+#title {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+}
 
- }
-  
-  .nav {
-    height: 80px;
-    width: 100%;
-    background-color: #ae0e0e;
-    position: relative;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-  }
-  
-  .nav > .nav-header {
-    display: inline;
-  }
-  
-  .nav > .nav-header > .nav-title {
-    display: inline-block;
-    font-size: 17px;
-    color: #fff;
-    padding: 10px 10px 10px 10px;
-  }
-  
-  .nav > .nav-btn {
-    display: none;
-  }
-  
-  .nav > .nav-links {
-    display: flex;
-    float: right;
-    font-size: 15px;
-  }
-  
-  .nav > .nav-links > a {
-    display: inline-block;
-    padding: 13px 10px 13px 10px;
-    text-decoration: none;
-    color: #efefef;
-  }
+.nav {
+  height: 80px;
+  width: 100%;
+  background-color: #ae0e0e;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
 
-  #empSearch {
-    width: 15em;
-    font-size: 11px;
-    position: absolute;
-    top: 38%;
-    left: 68%;
-    padding: .35em;
-  }
+.nav > .nav-header {
+  display: inline;
+}
 
-  #empSrchBtn {
-    font-size: 12px;
-    padding: 3px;
-    width: 5em;
-    position: absolute;
-    top: 37%;
-    left: 80%;
-    background-color: white;
-    border-radius: 5px;
-  }
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 17px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
 
-  #empSrchBtn:hover {
-    color: black;
-    
-  }
-  
-  .nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-  }
-  
-  .nav > #nav-check {
-    display: none;
-  }
+.nav > .nav-btn {
+  display: none;
+}
 
+.nav > .nav-links {
+  display: flex;
+  float: right;
+  font-size: 15px;
+}
 
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
 
+#empSearch {
+  width: 15em;
+  font-size: 11px;
+  position: absolute;
+  top: 38%;
+  left: 68%;
+  padding: 0.35em;
+}
 
-    /* MAIN */
+#empSrchBtn {
+  font-size: 12px;
+  padding: 3px;
+  width: 5em;
+  position: absolute;
+  top: 37%;
+  left: 80%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#empSrchBtn:hover {
+  color: black;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+/* MAIN */
 
 .modal-container {
   position: fixed;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   top: 0;
@@ -119,7 +114,7 @@
   overflow: auto;
   z-index: 10;
   display: none;
-  }
+}
 
 .modal {
   background-color: #e1e1e1;
@@ -129,13 +124,12 @@
   max-width: 400px;
   position: relative;
   margin: 10px auto;
-   border: 2px inset #ae0e0e;
+  border: 2px inset #ae0e0e;
   border-radius: 5px;
-   box-shadow: rgba(194, 16, 16, 0.3) 5px 5px 15px;
+  box-shadow: rgba(194, 16, 16, 0.3) 5px 5px 15px;
   top: 10%;
   text-align: center;
   padding: 1em;
-    
 }
 
 #close-modal-btn {
@@ -158,14 +152,14 @@
 }
 
 .form-input {
-  margin: .7em;
+  margin: 0.7em;
   width: 15em;
   border-radius: 5px;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 #form-submit {
-  padding: .3em;
+  padding: 0.3em;
   width: 7em;
 }
 
@@ -177,9 +171,8 @@
 
 .form-val {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  
 }
 
 /* Employee Table */
@@ -187,19 +180,17 @@ table {
   max-width: 90%;
 }
 
-
-table, th {
+table,
+th {
   margin-top: 10em;
   border-collapse: collapse;
-  padding: .5em;
-  border: 0; 
+  padding: 0.5em;
+  border: 0;
 }
 
-
- td {
+td {
   padding: 1em;
   border-top: 1px black solid;
-  
 }
 
 .action {
@@ -207,15 +198,16 @@ table, th {
 }
 
 button {
-  padding: .15em;
-  width: 4em; 
+  padding: 0.15em;
+  width: 4em;
   background-color: #c3121262;
   border: 2.5px #ae0e0e solid;
   font-weight: 500;
   font-size: 11px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border-radius: 3px;
-} 
+}
 
 button:hover {
   transform: translateY(-1px);
@@ -223,7 +215,7 @@ button:hover {
   border: 3.5px #e13131a9 solid;
   color: #eee;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: ease-in .15s;
+  transition: ease-in 0.15s;
   cursor: pointer;
 }
 
@@ -238,112 +230,114 @@ body::-webkit-scrollbar-thumb {
   background: #ae0e0e;
 }
 
-
-
-  
-  @media (max-width:600px) {
-    .nav > .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .nav > .nav-btn > label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-    }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-    .nav > .nav-btn > label > span {
-      display: block;
-      width: 25px;
-      height: 10px;
-      border-top: 2px solid #eee;
-    }
-    .nav > .nav-links {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: #ae0e0e;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 72px;
-      left: 0px;
-    }
-    .nav > .nav-links > a {
-      display: block;
-      width: 100%;
-    }
-    .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    }
-    .nav > #nav-check:checked ~ .nav-links {
-      height: calc(25vh - 50px);
-      overflow-y: auto;
-      border-radius: 1px;
-    }
-
-    #empSearch {
-      font-size: 13px;
-      position: absolute;
-      top: 70%;
-      left: 2.5%;
-    }
-  
-    #empSrchBtn {
-      padding: .4em;
-      position: absolute;
-      top: 68%;
-      left: 55%;
-      background-color: white;
-    }
-
-    .modal {
-      margin: 5px auto;
-      max-width: 90%;
-    }
-    
-    .form-btn {
-      margin-left: 0;
-      margin-top: .8em;
-    }
-
-  
-
-    table, thead, tbody, th, td, tr { 
-      display: block; 
-    }
-
-    table, th {
-      margin-top: 7em;
-    }
-    
-   
-    thead tr { 
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-    
-    tr { border: 1px solid #ccc; }
-    
-    td { 
-      border: none;
-      border-bottom: 1px solid #eee; 
-      position: relative;
-    }
-    
-    td:before { 
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      width: 45%; 
-      padding-right: 10px; 
-      white-space: nowrap;
-    }
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #ae0e0e;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 72px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(25vh - 50px);
+    overflow-y: auto;
+    border-radius: 1px;
   }
 
+  #empSearch {
+    font-size: 13px;
+    position: absolute;
+    top: 70%;
+    left: 2.5%;
+  }
+
+  #empSrchBtn {
+    padding: 0.4em;
+    position: absolute;
+    top: 68%;
+    left: 55%;
+    background-color: white;
+  }
+
+  .modal {
+    margin: 5px auto;
+    max-width: 90%;
+  }
+
+  .form-btn {
+    margin-left: 0;
+    margin-top: 0.8em;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  table,
+  th {
+    margin-top: 7em;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
