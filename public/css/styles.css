@@ -47,7 +47,7 @@
   
   .nav > .nav-header > .nav-title {
     display: inline-block;
-    font-size: 22px;
+    font-size: 17px;
     color: #fff;
     padding: 10px 10px 10px 10px;
   }
@@ -59,7 +59,7 @@
   .nav > .nav-links {
     display: flex;
     float: right;
-    font-size: 18px;
+    font-size: 15px;
   }
   
   .nav > .nav-links > a {
@@ -70,15 +70,17 @@
   }
 
   #empSearch {
+    width: 15em;
+    font-size: 11px;
     position: absolute;
-    top: 42%;
+    top: 38%;
     left: 68%;
     padding: .35em;
   }
 
   #empSrchBtn {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 80%;
     background-color: white;
     border-radius: 5px;
@@ -191,15 +193,17 @@ button:hover {
     }
 
     #empSearch {
+      font-size: 13px;
       position: absolute;
       top: 70%;
       left: 2.5%;
     }
   
     #empSrchBtn {
+      padding: .4em;
       position: absolute;
-      top: 70%;
-      left: 50%;
+      top: 68%;
+      left: 55%;
       background-color: white;
     }
 
