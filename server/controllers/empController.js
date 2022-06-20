@@ -64,13 +64,13 @@ exports.all = (req, res) => {
 
 
     exports.newEmp = (req, res) => {
-      const { first_name, last_name, email, phone, department } = req.body;
+      const { first_name, last_name, email, phone, department } = req.body.form;
       dbConnect.getConnection((err, success) => {
         if (success) {
           console.log(`Connected to ${process.env.DB_NAME} through DB_PORT-${success.threadId}`);
         }else if (err) console.log(err);
 
-        success.query('INSERT INTO employees SET first_name = ?, last_name = ?, email = ?, phone = ?, department = ?', [first_name, last_name, phone, email, department], (err, data) => {
+        success.query('INSERT INTO `employees` (`id`, `first_name`, `last_name`, `email`, `phone`, `department`) VALUES (NULL,?,?,?,?,?);', [first_name, last_name, phone, email, department], (err, data) => {
           success.release();
 
           if (data) {
