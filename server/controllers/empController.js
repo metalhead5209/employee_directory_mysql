@@ -1,4 +1,4 @@
-const { connection } = require('mongoose');
+
 const mysql = require('mysql');
 require("dotenv").config();
 
@@ -63,23 +63,24 @@ exports.all = (req, res) => {
     };
 
 
-    exports.newEmp = (req, res) => {
-      const { first_name, last_name, email, phone, department } = req.body.form;
+
+
+    exports.createEmp = (req, res) => {
       dbConnect.getConnection((err, success) => {
         if (success) {
           console.log(`Connected to ${process.env.DB_NAME} through DB_PORT-${success.threadId}`);
         }else if (err) console.log(err);
+       const { first_name, last_name, email, phone, department } = req.body;
 
-        success.query('INSERT INTO `employees` (`id`, `first_name`, `last_name`, `email`, `phone`, `department`) VALUES (NULL,?,?,?,?,?);', [first_name, last_name, phone, email, department], (err, data) => {
+        success.query('INSERT INTO employees SET first_name = ?, last_name = ? email = ?, phone = ?, department = ?', [first_name, last_name, email, phone, department] , (err, data) => {
           success.release();
 
           if (data) {
-            res.render('index', { data });
+            res.render('new');
           } else {
             console.log(err)
           }
           console.log("Data from table: \n", data);
-          console.log(first_name, last_name, email, phone, department)
         });
       });
     }

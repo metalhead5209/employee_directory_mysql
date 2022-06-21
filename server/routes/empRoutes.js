@@ -9,8 +9,8 @@ router.get('/', empController.all)
 
 router.post('/', empController.search)
 
-router.post('/', empController.newEmp)
-  
+router.post('/', empController.createEmp)
+
 
 
   module.exports = router;
