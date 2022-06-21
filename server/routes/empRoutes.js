@@ -9,7 +9,9 @@ router.get('/', empController.all)
 
 router.post('/', empController.search)
 
-router.post('/', empController.createEmp)
+router.get('/new', empController.new)
+
+router.post('/new', empController.create)
 
 
 

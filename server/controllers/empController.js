@@ -47,7 +47,6 @@ exports.all = (req, res) => {
           console.log(`Connected to ${process.env.DB_NAME} through DB_PORT-${success.threadId}`);
         }else if (err) console.log(err);
         let employee = req.body.search;
-
         success.query('SELECT * FROM employees WHERE first_name LIKE ? OR last_name LIKE ?', ['%' + employee + '%', '%' + employee + '%'], (err, data) => {
           success.release();
 
@@ -63,24 +62,28 @@ exports.all = (req, res) => {
     };
 
 
+    exports.new = (req, res) => {
+      res.render('new');
+    }
 
 
-    exports.createEmp = (req, res) => {
+
+    exports.create = (req, res) => {
+      const { first_name, last_name, email, phone, department } = req.body;
       dbConnect.getConnection((err, success) => {
         if (success) {
           console.log(`Connected to ${process.env.DB_NAME} through DB_PORT-${success.threadId}`);
         }else if (err) console.log(err);
-       const { first_name, last_name, email, phone, department } = req.body;
 
-        success.query('INSERT INTO employees SET first_name = ?, last_name = ? email = ?, phone = ?, department = ?', [first_name, last_name, email, phone, department] , (err, data) => {
+        success.query('INSERT INTO employees SET first_name = ?, last_name = ?, email = ?, phone = ?, department = ?', [first_name, last_name, email, phone, department] , (err, data) => {
           success.release();
 
           if (data) {
-            res.render('new');
+            res.redirect('/');
           } else {
             console.log(err)
           }
-          console.log("Data from table: \n", data);
+          // console.log("Data from table: \n", data);
         });
       });
     }
