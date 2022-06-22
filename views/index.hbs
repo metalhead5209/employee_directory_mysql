@@ -15,20 +15,20 @@
 
     {{#each data}}
       <tr>
-        <th scope="row">{{id}}</th>
-        <td>{{first_name}}</td>
+        <th scope="row">{{this.id}}</th>
+        <td>{{this.first_name}}</td>
         <td>{{last_name}}</td>
         <td>{{email}}</td>
         <td>{{phone}}</td>
         <td>{{department}}</td>
         <td class="action">
 
-          <a href="/show" type="button" class="action-btn" id="view"><button
+          <a href="/show/{{id}}" type="button" class="action-btn" id="view"><button
             >View</button></a>
           <a href="#" type="button" class="action-btn" id="edit"><button
             >Edit</button></a>
-          <a href="#" type="button" class="action-btn" id="delete"><button
-            >Delete</button></a>
+          {{!-- <a href="#" type="button" class="action-btn" id="delete"><button
+            >Delete</button></a> --}}
 
         </td>
       </tr>

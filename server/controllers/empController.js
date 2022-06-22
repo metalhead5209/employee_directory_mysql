@@ -90,8 +90,23 @@ exports.all = (req, res) => {
 
     
     exports.show = (req, res) => {
+      dbConnect.getConnection((err, success) => {
+        if (success) {
+          console.log(`Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`);
+        } else if (err) 
+          console.log("ERROR", err);
   
-      res.render('show');
+          success.query('SELECT * FROM employees WHERE id = ?', [req.params.id], (err, data) => {
+            success.release();
+            
+              if (data) {
+                res.render('show', { data });
+              } else {
+                console.log(err)
+              }
+              // console.log("Data from Table: \n", data)
+          });
+      });
     }
   
  

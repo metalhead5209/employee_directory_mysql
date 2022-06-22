@@ -1,8 +1,11 @@
+
+
 <div class="show-window">
     <div class="show-container">
 
         <div class="show-name-data">
-            <h1><span>ID: </span>Employee</h1>
+{{#each data}}
+            <h1><span>{{id}}: </span>{{first-name}} <span>{{last_name}}</span></h1>
         </div>
         <div class="show-content">
             <div class="show-title">
@@ -12,9 +15,9 @@
 
             </div>
             <div class="show-data">
-                <h3 class="show-dep">Engineering</h3>
-                <h4 class="show-info">555-555-5555</h4>
-                <h4 class="show-info">employee@email.com</h4>
+                <h3 class="show-dep">{{department}}</h3>
+                <h4 class="show-info">{{phone}}</h4>
+                <h4 class="show-info">{{email}}</h4>
             </div>
         </div>
         <div class="show-action">
@@ -24,3 +27,5 @@
 
     </div>
 </div>
+
+{{/each}}
