@@ -9,6 +9,3 @@ addEmp.addEventListener('click', () => {
     modal.style.display = 'block';
 })
 
-// closeModal.addEventListener('click', () => {
-//     modal.style.display = 'none';
-// })

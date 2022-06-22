@@ -55,7 +55,7 @@ exports.all = (req, res) => {
           } else {
             console.log(err)
           }
-          console.log("Data from table: \n", data);
+          // console.log("Data from table: \n", data);
         });
       });
       
@@ -86,6 +86,12 @@ exports.all = (req, res) => {
           // console.log("Data from table: \n", data);
         });
       });
+    }
+
+    
+    exports.show = (req, res) => {
+  
+      res.render('show');
     }
   
  

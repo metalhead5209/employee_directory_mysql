@@ -13,6 +13,7 @@ router.get('/new', empController.new)
 
 router.post('/new', empController.create)
 
+router.get('/show', empController.show)
 
 
   module.exports = router;
