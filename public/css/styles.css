@@ -8,6 +8,7 @@ body {
   font-family: "Readex Pro", sans-serif;
   font-weight: 600;
   background-color: rgb(247, 245, 245);
+  
 }
 
 .main-body {
@@ -16,6 +17,7 @@ body {
   flex-direction: column;
   margin: auto;
   width: 85%;
+  height: 100vh;
 }
 
 /* NAVBAR */
@@ -114,7 +116,7 @@ body {
   left: 0;
   overflow: auto;
   z-index: 10;        
-  /* display: none; */
+  
 }
 
 .modal {
@@ -179,6 +181,7 @@ body {
 /* Employee Table */
 table {
   max-width: 90%;
+  margin-bottom: 3rem;
 }
 
 table,
@@ -287,6 +290,19 @@ button:hover {
   color: white;
   margin: 1em;
 
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  flex-direction: column;
+}
+
+#foot-two {
+  font-size: .7em;
 }
 
 
