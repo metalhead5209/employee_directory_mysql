@@ -108,5 +108,26 @@ exports.all = (req, res) => {
           });
       });
     }
+
+
+    exports.delete = (req, res) => {
+      dbConnect.getConnection((err, success) => {
+        if (success) {
+          console.log(`Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`);
+        } else if (err)
+          console.log("ERROR", err);
+
+          success.query('DELETE FROM employees WHERE id = ?', [req.params.id], (err, data) => {
+            success.release()
+
+            if (data) {
+             
+              res.redirect('/');
+            } else {
+              console.log(err)
+            }
+          })
+      })
+    }
   
  

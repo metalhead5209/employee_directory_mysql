@@ -15,5 +15,7 @@ router.post('/new', empController.create)
 
 router.get('/show/:id', empController.show)
 
+router.get('/:id', empController.delete)
+
 
   module.exports = router;
