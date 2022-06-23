@@ -13,7 +13,7 @@ router.get('/new', empController.new)
 
 router.post('/new', empController.create)
 
-router.get('/show:id', empController.show)
+router.get('/show/:id', empController.show)
 
 
   module.exports = router;
