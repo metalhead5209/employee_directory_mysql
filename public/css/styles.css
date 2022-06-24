@@ -76,7 +76,8 @@ body {
   position: absolute;
   top: 38%;
   left: 68%;
-  padding: 0.35em;
+  padding: 0.45em;
+  border-radius: 5px;
 }
 
 #empSrchBtn {
@@ -84,8 +85,8 @@ body {
   padding: 3px;
   width: 5em;
   position: absolute;
-  top: 37%;
-  left: 80%;
+  top: 38%;
+  left: 78%;
   background-color: white;
   border-radius: 5px;
 }
@@ -368,14 +369,14 @@ body::-webkit-scrollbar-thumb {
   #empSearch {
     font-size: 13px;
     position: absolute;
-    top: 70%;
+    top: 69.8%;
     left: 2.5%;
   }
 
   #empSrchBtn {
     padding: 0.4em;
     position: absolute;
-    top: 68%;
+    top: 70%;
     left: 55%;
     background-color: white;
   }
