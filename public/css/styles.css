@@ -17,7 +17,6 @@ body {
   flex-direction: column;
   margin: auto;
   width: 85%;
-  height: 100vh;
 }
 
 /* NAVBAR */
@@ -297,7 +296,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 40px;
+  height: 50px;
   flex-direction: column;
 }
 
@@ -429,4 +428,18 @@ body::-webkit-scrollbar-thumb {
     padding-right: 10px;
     white-space: nowrap;
   }
+
+  .show-container {
+    max-width: 90%;
+  }
+
+  .show-content {
+    display: block;
+  }
+
+  .show-title {
+    display: none;
+  }
+
+
 }
