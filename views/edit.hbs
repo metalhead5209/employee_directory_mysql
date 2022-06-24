@@ -3,9 +3,11 @@
     <a href="/"><span id="close-modal-btn">&#88</span></a>
     <h2>Add Employee</h2>
     <div class="form">
-      <form action="/new" method="POST" class="modal-form" novalidate>
-       {{> form}}
+      {{#each data}}
+      <form action="/edit/{{id}}" method="POST" class="modal-form" novalidate>
+        {{> form}}
       </form>
+      {{/each}}
     </div>
 
   </div>

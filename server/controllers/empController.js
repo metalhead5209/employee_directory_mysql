@@ -141,3 +141,60 @@ exports.delete = (req, res) => {
     );
   });
 };
+
+
+// Edit Employee modal
+exports.edit = (req, res) => {
+  dbConnect.getConnection((err, success) => {
+    if (success) {
+      console.log(
+        `Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`
+      );
+    } else if (err) console.log("ERROR", err);
+
+    success.query(
+      "SELECT * FROM employees WHERE id = ?",
+      [req.params.id],
+      (err, data) => {
+        success.release();
+
+        if (data) {
+          res.render("edit", { data });
+        } else {
+          console.log(err);
+        }
+        console.log("Data from Table: \n", data)
+      }
+    );
+  });
+}
+
+// Update Employee
+exports.update = (req, res) => {
+  const { first_name, last_name, email, phone, department } = req.body;
+  dbConnect.getConnection((err, success) => {
+    if (success) {
+      console.log(
+        `Connected to ${process.env.DB_NAME} through DB_Port-${success.threadId}`
+      );
+    } else if (err) console.log("ERROR", err);
+
+    success.query(
+      "UPDATE employees SET first_name = ?, last_name = ?, email = ?, phone = ?, department = ? WHERE id = ?",
+      [first_name, last_name, email, phone, department, req.params.id],
+      (err, data) => {
+        success.release();
+
+        if (data) {
+          res.redirect('/')
+          // res.render("edit", { data });
+        } else {
+          console.log(err);
+        }
+        console.log("Data from Table: \n", data)
+      }
+    );
+  });
+}
+
+

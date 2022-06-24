@@ -15,4 +15,8 @@ router.get("/show/:id", empController.show);
 
 router.get("/:id", empController.delete);
 
+router.get("/edit/:id", empController.edit);
+
+router.post("edit/:id", empController.update)
+
 module.exports = router;
