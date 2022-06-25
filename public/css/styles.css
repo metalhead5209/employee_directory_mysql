@@ -396,7 +396,7 @@ body::-webkit-scrollbar-thumb {
   th,
   td,
   tr {
-    display: inline-block;
+    display: grid;
   }
 
   table,
@@ -427,6 +427,11 @@ body::-webkit-scrollbar-thumb {
     width: 45%;
     padding-right: 10px;
     white-space: nowrap;
+  }
+
+  .action {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .show-container {
