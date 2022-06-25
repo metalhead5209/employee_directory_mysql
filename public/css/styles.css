@@ -8,7 +8,6 @@ body {
   font-family: "Readex Pro", sans-serif;
   font-weight: 600;
   background-color: rgb(247, 245, 245);
- 
   
 }
 
@@ -17,8 +16,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: auto;
-  width: 85%; 
-  
+  width: 85%;
 }
 
 /* NAVBAR */
@@ -182,7 +180,6 @@ body {
 
 /* Employee Table */
 table {
-  max-width: 90%;
   margin-bottom: 3rem;
 }
 
@@ -399,7 +396,7 @@ body::-webkit-scrollbar-thumb {
   th,
   td,
   tr {
-    display: block;
+    display: inline-block;
   }
 
   table,
