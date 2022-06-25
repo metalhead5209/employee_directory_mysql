@@ -3,7 +3,7 @@
     <a href="/"><span id="close-modal-btn">&#88</span></a>
     <h2>Add Employee</h2>
     <div class="form">
-      <form action="/new" method="POST" class="modal-form" novalidate>
+      <form action="/new" method="POST" class="modal-form" name="emp-form" onsubmit="return formVal()">
        {{> form}}
       </form>
     </div>

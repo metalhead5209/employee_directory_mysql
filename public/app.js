@@ -7,5 +7,7 @@ const closeModal = document.querySelector('#close-modal-btn');
 
 addEmp.addEventListener('click', () => {
     modal.style.display = 'block';
-})
+});
+
+
 
