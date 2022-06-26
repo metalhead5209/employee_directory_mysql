@@ -377,7 +377,7 @@ body::-webkit-scrollbar-thumb {
     padding: 0.4em;
     position: absolute;
     top: 70%;
-    left: 55%;
+    left: 65%;
     background-color: white;
   }
 
@@ -445,6 +445,12 @@ body::-webkit-scrollbar-thumb {
 
   .show-title {
     display: none;
+  }
+
+  .show-data {
+    font-size: 1.2rem;
+    margin: 5px auto;
+    
   }
 
 
